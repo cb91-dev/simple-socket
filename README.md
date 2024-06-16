@@ -133,3 +133,6 @@ docker-compose exec web sh -c "PYTHONPATH=/workspace pytest -vs /workspace/app/t
 
 ### Contributing
 Contributions are welcome! Please submit a pull request or open an issue to discuss new features or bug fixes. Make sure to follow the project's coding standards and write tests for new features.
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
