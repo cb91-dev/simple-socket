@@ -1,0 +1,27 @@
+{
+    "name": "FastAPI WebSocket",
+    "context": "..",
+    "dockerFile": "../Dockerfile",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ],
+            "settings": {
+                "python.pythonPath": "/usr/local/bin/python",
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.pylintEnabled": true,
+                "python.linting.enabled": true,
+                "python.formatting.provider": "black"
+            }
+        }
+    },
+    "runArgs": ["--init"],
+    "mounts": [
+        "source=${localWorkspaceFolder}/app,target=/app,type=bind"
+    ],
+    "postCreateCommand": "pip install -r /app/requirements.txt",
+    "remoteUser": "root"
+}
